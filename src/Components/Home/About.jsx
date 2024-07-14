@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
-import React from "react"; // Import AOS library
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Initialize AOS
 if (typeof window !== "undefined") {
@@ -7,20 +10,24 @@ if (typeof window !== "undefined") {
 }
 
 export default function About() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="bg-primary">
-      <div className="container mx-auto py-24">
+      <div className="max-w-[1420px] mx-auto py-12 md:py-24 px-4 md:px-8 lg:px-16">
         {/* About Section */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 md:gap-20">
           <div className="w-full md:w-[75%]">
             <h1
-              className="text-5xl font-merriweather font-normal text-[#88A9C3]"
+              className="text-3xl md:text-5xl font-merriweather font-normal text-[#88A9C3]"
               data-aos="fade-up"
             >
               About Me
             </h1>
             <p
-              className="text-2xl font-normal text-[#88A9C3B2] font-raleway mt-3 text-justify"
+              className="text-lg md:text-2xl font-normal text-[#88A9C3B2] font-raleway mt-3 text-justify"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -29,7 +36,7 @@ export default function About() {
               Dedication to Excellence.
             </p>
             <button
-              className="bg-neutral mt-10 px-6 py-4 rounded-lg text-primary font-medium text-2xl font-roboto"
+              className="bg-neutral mt-6 md:mt-10 px-4 py-2 md:px-6 md:py-4 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -38,7 +45,7 @@ export default function About() {
           </div>
           <div className="w-full md:w-auto">
             <div
-              className="grid grid-cols-2 gap-10"
+              className="grid grid-cols-2 gap-4 md:gap-10"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -50,10 +57,10 @@ export default function About() {
                 { value: "1B+", label: "Total revenue achieved" },
               ].map((stat, index) => (
                 <div key={index}>
-                  <h5 className="text-5xl font-bold text-center mb-3 text-neutral font-merriweather">
+                  <h5 className="text-3xl md:text-5xl font-bold text-center mb-3 text-neutral font-merriweather">
                     {stat.value}
                   </h5>
-                  <p className="text-2xl font-normal leading-[25px] text-center text-[#88A9C3CC] font-raleway">
+                  <p className="text-lg md:text-2xl font-normal leading-[25px] text-center text-[#88A9C3CC] font-raleway">
                     {stat.label}
                   </p>
                 </div>
@@ -68,29 +75,29 @@ export default function About() {
             <Image
               src="https://i.ibb.co/Xzbzvbf/Rectangle-3916.png"
               alt="Mediterranean Sealine Cottage"
-              width="488"
-              height="526"
-              className="rounded-lg"
+              width={488}
+              height={526}
+              className="rounded-lg w-full h-auto lg:w-[488px] lg:h-[526px]"
             />
             <div className="flex justify-start items-center gap-4 mt-4">
               <Image
                 src="https://i.ibb.co/4Fr4YXj/Rectangle-3917.png"
                 alt="Mediterranean Sealine Cottage"
-                width="232"
-                height="200"
-                className="rounded-lg"
+                width={232}
+                height={200}
+                className="rounded-lg w-full h-auto sm:w-[232px] sm:h-[200px]"
               />
               <Image
                 src="https://i.ibb.co/4Fr4YXj/Rectangle-3917.png"
                 alt="Mediterranean Sealine Cottage"
-                width="232"
-                height="200"
-                className="rounded-lg"
+                width={232}
+                height={200}
+                className="rounded-lg w-full h-auto sm:w-[232px] sm:h-[200px]"
               />
             </div>
           </div>
           <div className="w-full lg:w-[170%]" data-aos="fade-left">
-            <p className="text-2xl font-raleway text-[#88A9C3CC] text-justify leading-[29px] mb-10">
+            <p className="text-lg md:text-2xl font-raleway text-[#88A9C3CC] text-justify leading-7 md:leading-[29px] mb-10">
               Meet Sarah Thompson, A dedicated and experienced real estate
               professional with over a decade of experience in the industry.
               Sarah's passion for helping clients find their dream homes is
@@ -127,11 +134,11 @@ export default function About() {
                 <Image
                   src="https://i.ibb.co/wND4fHR/Frame-1000008263.png"
                   alt="Personalized Approach"
-                  width="30"
-                  height="30"
+                  width={30}
+                  height={30}
                   className="rounded-lg"
                 />
-                <p className="text-2xl font-raleway text-[#88A9C3CC] text-justify leading-[29px]">
+                <p className="text-lg md:text-2xl font-raleway text-[#88A9C3CC] text-justify leading-7 md:leading-[29px]">
                   Personalized Approach
                 </p>
               </div>
@@ -139,11 +146,11 @@ export default function About() {
                 <Image
                   src="https://i.ibb.co/wND4fHR/Frame-1000008263.png"
                   alt="Strong Community Connections"
-                  width="30"
-                  height="30"
+                  width={30}
+                  height={30}
                   className="rounded-lg"
                 />
-                <p className="text-2xl font-raleway text-[#88A9C3CC] text-justify leading-[29px]">
+                <p className="text-lg md:text-2xl font-raleway text-[#88A9C3CC] text-justify leading-7 md:leading-[29px]">
                   Strong Community Connections
                 </p>
               </div>

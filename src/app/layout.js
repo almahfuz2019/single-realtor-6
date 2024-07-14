@@ -1,6 +1,7 @@
 import { Merriweather, Raleway, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Shared/Navbar";
+import Footer from "@/Components/Shared/Footer";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
