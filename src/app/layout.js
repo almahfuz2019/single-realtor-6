@@ -2,6 +2,7 @@ import { Merriweather, Raleway, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Shared/Navbar";
 import Footer from "@/Components/Shared/Footer";
+import Animation from "@/Components/Shared/Animation";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${merriweather.className} ${raleway.className} ${roboto.className}`}
       >
+        <Animation/>
         <Navbar />
         {children}
         <Footer/>

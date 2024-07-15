@@ -18,10 +18,10 @@ const cities = [
 
 export default function Neighborhood() {
   return (
-    <div className="bg-primary py-12 sm:py-24 px-4 sm:px-8 lg:px-16">
+    <div className="bg-primary py-12 sm:py-24 px-4 sm:px-8 lg:px-16 overflow-hidden">
       <section className="max-w-[1420px] mx-auto">
         {/* Header section with title and description */}
-        <header className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center  mb-12">
           <div data-aos="fade-right">
             <h1 className="text-3xl md:text-5xl font-merriweather text-[#88A9C3]">
               Neighborhood
@@ -33,7 +33,7 @@ export default function Neighborhood() {
             </p>
           </div>
           <div
-            className="flex justify-center md:justify-end"
+            className="flex justify-start sm:justify-end lg:justify-end"
             data-aos="fade-left"
           >
             <button className="bg-neutral px-4 md:px-6 py-2 md:py-3 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto">

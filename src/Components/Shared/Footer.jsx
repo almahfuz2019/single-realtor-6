@@ -4,11 +4,19 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-[#090909E5] py-12 px-4">
-      <div className="max-w-[1420px] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start lg:items-end justify-between">
+    <div className="bg-[#090909E5] py-12 overflow-hidden">
+      <div className="max-w-[1420px] mx-auto px-4 md:px-8">
+        <div className="flex flex-col lg:flex-row gap-24 lg:gap-20 items-start lg:items-end justify-between">
           {/* Left Section */}
-          <div className="w-full lg:w-[40%]">
+          <div className="w-full lg:w-[70%]">
+            <Image
+              data-aos="fade-up"
+              className="-mt-12 mb-8"
+              src="https://i.ibb.co/vmqW2Cg/Frame-1000008324.png"
+              height="140"
+              width="240"
+              alt="footer logo"
+            />
             <h1 className="text-neutral text-3xl md:text-4xl lg:text-5xl font-normal leading-[40px] md:leading-[50px] lg:leading-[60px] font-merriweather">
               Get In Touch
             </h1>
@@ -17,7 +25,7 @@ export default function Footer() {
               Guidance on Your Real Estate Journey. Let's Transform Your Dreams
               into Reality.
             </p>
-            <button className="bg-[#88A9C3] hover:bg-[#6e8fa3] text-neutral font-medium text-lg md:text-xl lg:text-2xl font-roboto mt-6 px-6 py-3 rounded-lg">
+            <button className="bg-[#88A9C3] hover:bg-[#6e8fa3] text-black  text-lg md:text-xl lg:text-2xl font-roboto mt-6 px-[26px] py-[16px] rounded-xl font-roboto font-semibold">
               Let's Talk
             </button>
           </div>
@@ -52,7 +60,7 @@ export default function Footer() {
             <h1 className="text-neutral text-3xl md:text-4xl lg:text-5xl font-normal leading-[40px] md:leading-[50px] lg:leading-[60px] font-merriweather">
               Quick Links
             </h1>
-            <div className="flex flex-wrap gap-2 md:gap-4 text-lg md:text-xl lg:text-2xl text-[#F3E3E2CC] font-roboto mt-4">
+            <div className="flex flex-wrap gap-4  text-lg md:text-xl lg:text-2xl text-[#F3E3E2CC] font-roboto mt-4">
               <a href="#" className="hover:text-neutral">
                 Home
               </a>

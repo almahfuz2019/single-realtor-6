@@ -18,7 +18,7 @@ const TestimonialSlider = () => {
   return (
     <div className="">
       {/* Header section */}
-      <div className="flex justify-end pr-10 mb-8 gap-10 mt-4">
+      <div className="flex justify-end pr-10 mb-8 gap-10 mt-4 overflow-hidden">
         <Image
           onClick={() => instanceRef.current.prev()}
           src="https://i.ibb.co/c6BWbKS/Frame-1000008071.png"

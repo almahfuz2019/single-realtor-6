@@ -34,11 +34,12 @@ const insightsData = [
 ];
 
 export default function Insights() {
+
   return (
-    <div className="py-12 md:py-24 px-4">
+    <div className="py-12 md:py-24 overflow-hidden">
       <div className="container mx-auto mb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 justify-between items-end">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 justify-between items-end px-4 md:px-8">
+          <div data-aos="fade-right">
             <h1 className="text-3xl md:text-5xl font-merriweather font-normal text-neutral">
               Insights
             </h1>
@@ -48,7 +49,7 @@ export default function Insights() {
               local insights.
             </p>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end" data-aos="fade-left">
             <button className="bg-primary mt-6 md:mt-10 px-6 md:px-[25px] py-3 md:py-[15px] rounded-lg text-neutral font-medium text-lg md:text-2xl font-roboto">
               See all
             </button>
@@ -56,7 +57,10 @@ export default function Insights() {
         </div>
       </div>
       <Marquee speed={60} pauseOnHover={true}>
-        <div className="flex gap-5 justify-start items-center w-full flex-nowrap">
+        <div
+          className="flex gap-5 justify-start items-center w-full flex-nowrap"
+          data-aos="zoom-in"
+        >
           {insightsData.map((insight, index) => (
             <div key={index} className="max-w-xs md:max-w-[457px]">
               <Image
@@ -83,6 +87,7 @@ export default function Insights() {
             </div>
           ))}
         </div>
+        <div className="mr-5"></div>
       </Marquee>
     </div>
   );

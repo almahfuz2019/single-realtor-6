@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 
+
 const Contact = () => {
   const {
     register,
@@ -14,10 +15,14 @@ const Contact = () => {
     console.log(data);
   };
 
+
   return (
-    <div className="bg-primary py-12 md:py-24">
-      <div className="max-w-[1420px] mx-auto px-4 md:px-8 lg:px-16">
-        <header className="text-center flex flex-col gap-y-3 md:gap-y-6 mb-10 md:mb-20">
+    <div className="bg-primary py-12 md:py-24 overflow-hidden">
+      <div className="max-w-[1420px] mx-auto px-4 md:px-6 lg:px-16">
+        <header
+          className="text-center flex flex-col gap-y-3 md:gap-y-6 mb-10 md:mb-20"
+          data-aos="fade-up"
+        >
           <h1 className="text-3xl md:text-5xl font-merriweather font-normal text-neutral">
             Contact Me
           </h1>
@@ -29,7 +34,7 @@ const Contact = () => {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div>
+          <div data-aos="fade-up">
             <Image
               src="https://i.ibb.co/KmKsmn4/Rectangle-3924-1.png"
               height={730}
@@ -38,12 +43,15 @@ const Contact = () => {
               className="w-full h-auto rounded-lg"
             />
           </div>
-          <div>
+          <div data-aos="fade-up">
             <p className="text-xl md:text-[28px] leading-[36px] font-normal font-merriweather text-neutral mb-8">
               Connect Today for Personalized Assistance: Your Dream Home Awaits,
               Let's Make It Happen Together!
             </p>
-            <div className="flex flex-col gap-4 my-8 border border-[#F3E3E233] border-x-0 border-t-0 pb-8">
+            <div
+              className="flex flex-col gap-4 my-8 border border-[#F3E3E233] border-x-0 border-t-0 pb-8"
+              data-aos="fade-up"
+            >
               <div className="text-[#F3E3E2CC] flex items-center gap-2">
                 <Image
                   src="https://i.ibb.co/kgfKsFj/Mask-group-20.png"
@@ -81,6 +89,7 @@ const Contact = () => {
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="space-y-8 md:space-y-10 mt-5 text-[#F3E3E2CC]"
+              data-aos="fade-up"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

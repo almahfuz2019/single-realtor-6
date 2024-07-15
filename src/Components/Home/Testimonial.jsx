@@ -1,19 +1,10 @@
-"use client"
+"use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import TestimonialSlider from "./TestimonialSlider";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-// Initialize AOS
-if (typeof window !== "undefined") {
-  AOS.init();
-}
 
 export default function Testimonial() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
 
   const testimonials = [
     {
@@ -34,10 +25,10 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="bg-primary py-12 md:py-24 px-4">
+    <div className="bg-primary py-12 md:py-24 px-4 md:px-8 overflow-hidden">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-10">
-          <div className="w-full md:w-[45%]" data-aos="fade-right">
+        <div className="flex flex-col lg:flex-row justify-between items-end gap-10">
+          <div className="w-full lg:w-[45%]" data-aos="fade-right">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-merriweather font-normal text-[#88A9C3]">
               Testimonial
             </h1>
@@ -45,9 +36,15 @@ export default function Testimonial() {
               Discover What Our Clients Say: Real Stories, Real Experiences,
               Real Satisfaction – Testimonials Speak Louder Than Words.
             </p>
-            <button className="bg-neutral hover:bg-[#F3E3E2CC] mt-6 md:mt-10 px-6 py-3 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto">
-              Contact Me
-            </button>
+
+            <div
+              className="flex justify-start sm:justify-end lg:justify-start mt-8 lg:mt-0"
+              data-aos="fade-left"
+            >
+              <button className="bg-neutral px-4 md:px-6 py-2 md:py-3 mt-6 md:mt-10 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto">
+                Contact Me
+              </button>
+            </div>
             <div className="flex flex-col gap-4 mt-10">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -75,7 +72,7 @@ export default function Testimonial() {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-[55%]" data-aos="fade-left">
+          <div className="w-full lg:w-[55%]" data-aos="fade-left">
             <TestimonialSlider />
           </div>
         </div>

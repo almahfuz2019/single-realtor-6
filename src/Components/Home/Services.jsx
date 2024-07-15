@@ -1,22 +1,11 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-// Initialize AOS
-if (typeof window !== "undefined") {
-  AOS.init();
-}
+import React from "react";
 
 export default function Services() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
-    <div className="bg-secondary py-12 md:py-24 text-neutral">
+    <div className="bg-secondary py-12 md:py-24 text-neutral overflow-hidden">
       <div className="max-w-[1420px] mx-auto px-4 md:px-8 lg:px-16">
         <section className="grid grid-cols-1 lg:flex gap-8 md:gap-16 justify-start">
           {/* Header section with title, description, and button */}

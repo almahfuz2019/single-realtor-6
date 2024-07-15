@@ -1,47 +1,34 @@
-"use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-// Initialize AOS
-if (typeof window !== "undefined") {
-  AOS.init();
-}
+import React from "react";
 
 export default function About() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <div className="bg-primary">
-      <div className="max-w-[1420px] mx-auto py-12 md:py-24 px-4 md:px-8 lg:px-16">
+      <div className="max-w-[1420px] mx-auto py-12 md:py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
         {/* About Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10 md:gap-20">
-          <div className="w-full md:w-[75%]">
-            <h1
-              className="text-3xl md:text-5xl font-merriweather font-normal text-[#88A9C3]"
-              data-aos="fade-up"
-            >
-              About Me
-            </h1>
-            <p
-              className="text-lg md:text-2xl font-normal text-[#88A9C3B2] font-raleway mt-3 text-justify"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Passionate Real Estate Professional Committed to Helping You Find
-              Your Dream Home with Personalized Service, Local Expertise, and a
-              Dedication to Excellence.
-            </p>
-            <button
-              className="bg-neutral mt-6 md:mt-10 px-4 py-2 md:px-6 md:py-4 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Contact Me
-            </button>
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 md:gap-20">
+          <div className="w-full lg:w-[75%]">
+            {/* Header section with title and description */}
+            <header className="grid grid-cols-1  gap-8 items-center  mb-12">
+              <div data-aos="fade-right">
+                <h1 className="text-3xl md:text-5xl font-merriweather text-[#88A9C3]">
+                  About Me
+                </h1>
+                <p className="text-lg md:text-2xl text-[#88A9C3CC] font-raleway mt-3">
+                  Passionate Real Estate Professional Committed to Helping You
+                  Find Your Dream Home with Personalized Service, Local
+                  Expertise, and a Dedication to Excellence.
+                </p>
+              </div>
+              <div
+                className="flex justify-start sm:justify-end lg:justify-start"
+                data-aos="fade-left"
+              >
+                <button className="bg-neutral px-4 md:px-6 py-2 md:py-3 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto">
+                  Contact Me
+                </button>
+              </div>
+            </header>
           </div>
           <div className="w-full md:w-auto">
             <div
@@ -71,13 +58,13 @@ export default function About() {
 
         {/* Image and Bio Section */}
         <div className="flex flex-col lg:flex-row justify-start items-start gap-10 lg:gap-20 mt-16">
-          <div className="w-full lg:w-auto" data-aos="fade-right">
+          <div className="w-full " data-aos="fade-right">
             <Image
               src="https://i.ibb.co/Xzbzvbf/Rectangle-3916.png"
               alt="Mediterranean Sealine Cottage"
               width={488}
               height={526}
-              className="rounded-lg w-full h-auto lg:w-[488px] lg:h-[526px]"
+              className="rounded-lg w-full h-auto "
             />
             <div className="flex justify-start items-center gap-4 mt-4">
               <Image
@@ -85,14 +72,14 @@ export default function About() {
                 alt="Mediterranean Sealine Cottage"
                 width={232}
                 height={200}
-                className="rounded-lg w-full h-auto sm:w-[232px] sm:h-[200px]"
+                className="rounded-lg w-full h-auto sm:w-[190px] sm:h-[200px] object-cover  2xl:h-full 2xl:w-full"
               />
               <Image
                 src="https://i.ibb.co/4Fr4YXj/Rectangle-3917.png"
                 alt="Mediterranean Sealine Cottage"
                 width={232}
                 height={200}
-                className="rounded-lg w-full h-auto sm:w-[232px] sm:h-[200px]"
+                className="rounded-lg w-full h-auto sm:w-[190px] sm:h-[200px] 2xl:h-full 2xl:w-full object-cover"
               />
             </div>
           </div>

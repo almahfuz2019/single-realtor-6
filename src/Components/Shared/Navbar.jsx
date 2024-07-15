@@ -64,15 +64,15 @@ export default function Navbar() {
               Get In Touch
             </button>
 
-            <div className="lg:hidden" ref={menuRef}>
+            <div className="lg:hidden relative" ref={menuRef}>
               <button
-                className="bg-[#e6e6e6] p-2 rounded-xl focus:outline-none ml-4"
+                className="bg-[#e6e6e6] text-primary p-2 rounded-xl focus:outline-none ml-4"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 <svg
                   fill="currentColor"
                   viewBox="0 0 20 20"
-                  className="w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10"
+                  className="w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 "
                 >
                   <path
                     className={!menuOpen ? "block" : "hidden"}
@@ -90,7 +90,7 @@ export default function Navbar() {
               </button>
 
               {menuOpen && (
-                <ul className="menu menu-compact dropdown-content mt-3 z-[1] p-2 shadow-md rounded-box w-48 sm:w-56 md:w-60 bg-[#e6e6e6]">
+                <ul className="menu menu-compact absolute right-0 mt-3 z-[1] p-2 shadow-md rounded-box w-48 sm:w-56 md:w-60 bg-[#e6e6e6]">
                   {[
                     "Home",
                     "About Me",
