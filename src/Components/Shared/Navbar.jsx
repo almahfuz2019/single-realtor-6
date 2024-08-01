@@ -24,15 +24,15 @@ export default function Navbar() {
   return (
     <header>
       <div className="bg-[#091202] relative z-10 font-raleway">
-        <nav className="navbar z-50 text-[#88A9C3] mx-auto py-5 font-montserrat px-4 max-w-[1420px] flex justify-between items-center">
+        <nav className="navbar z-50 text-[#88A9C3] mx-auto py-2 font-montserrat px-4 max-w-screen-xl flex justify-between items-center">
           <div className="navbar-start">
             <a href="#home">
               <Image
                 className="h-12 md:h-16 xl:h-20 w-auto"
                 height="80"
                 width="160"
-                src="https://i.ibb.co/zXLmZ5r/Frame-1000008084.png"
-                alt="Tech Plato Logo"
+                src="/Images/Navbar_Logo_For_PC.webp"
+                alt="Logo"
               />
             </a>
           </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <li key={index}>
                   <a
                     href={`#${item.toLowerCase().replace(" ", "")}`}
-                    className="text-[#88A9C3] hover:text-white text-lg xl:text-xl 2xl:text-2xl font-medium"
+                    className="text-[#88A9C3] hover:text-white text-base xl:text-lg 2xl:text-xl font-medium"
                   >
                     {item}
                   </a>
@@ -60,10 +60,11 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-end flex items-center">
-            <button className="bg-[#F3E3E2] px-4 py-2 xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 rounded-lg text-[#091235] font-medium text-lg xl:text-xl 2xl:text-2xl font-roboto">
-              Get In Touch
-            </button>
-
+            <a href="#contact">
+              <button className="  xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 xl:text-xl 2xl:text-2xl font-roboto bg-neutral px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-primary font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#2B4257] hover:text-neutral hover:shadow-lg ">
+                Get In Touch
+              </button>
+            </a>
             <div className="lg:hidden relative" ref={menuRef}>
               <button
                 className="bg-[#e6e6e6] text-primary p-2 rounded-xl focus:outline-none ml-4"
@@ -72,7 +73,7 @@ export default function Navbar() {
                 <svg
                   fill="currentColor"
                   viewBox="0 0 20 20"
-                  className="w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 "
+                  className="w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10"
                 >
                   <path
                     className={!menuOpen ? "block" : "hidden"}
@@ -102,7 +103,7 @@ export default function Navbar() {
                     <li key={index}>
                       <a
                         href={`#${item.toLowerCase().replace(" ", "")}`}
-                        className="text-secondary text-lg sm:text-xl md:text-2xl hover:text-[#091235]"
+                        className="text-secondary text-base sm:text-lg md:text-xl hover:text-[#091235]"
                       >
                         {item}
                       </a>

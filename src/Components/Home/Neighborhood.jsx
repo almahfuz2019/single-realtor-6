@@ -2,31 +2,34 @@ import Image from "next/image";
 
 // Define the cities with their names and image URLs
 const cities = [
-  { name: "Toronto", imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png" },
+  { name: "Toronto", imageUrl: "/Images/Neighborhood-Image1.png" },
   {
     name: "Vancouver",
-    imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png",
+    imageUrl: "/Images/Neighborhood-Image1.png",
   },
-  { name: "Montreal", imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png" },
-  { name: "Calgary", imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png" },
-  { name: "Toronto", imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png" },
+  { name: "Montreal", imageUrl: "/Images/Neighborhood-Image1.png" },
+  { name: "Calgary", imageUrl: "/Images/Neighborhood-Image1.png" },
+  { name: "Toronto", imageUrl: "/Images/Neighborhood-Image1.png" },
   {
     name: "Vancouver",
-    imageUrl: "https://i.ibb.co/6B536FH/Rectangle-3907.png",
+    imageUrl: "/Images/Neighborhood-Image1.png",
   },
 ];
 
 export default function Neighborhood() {
   return (
-    <div className="bg-primary py-12 sm:py-24 px-4 sm:px-8 lg:px-16 overflow-hidden">
-      <section className="max-w-[1420px] mx-auto">
+    <div
+      id="neighborhood"
+      className="bg-primary py-12 sm:py-24 px-4 sm:px-8 lg:px-8 overflow-hidden"
+    >
+      <section className="max-w-screen-xl mx-auto">
         {/* Header section with title and description */}
-        <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center  mb-12">
+        <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
           <div data-aos="fade-right">
-            <h1 className="text-3xl md:text-5xl font-merriweather text-[#88A9C3]">
+            <h1 className="text-3xl md:text-[42px]  font-merriweather text-[#88A9C3]">
               Neighborhood
             </h1>
-            <p className="text-lg md:text-2xl text-[#88A9C3CC] font-raleway mt-3">
+            <p className="text-base md:text-xl text-[#88A9C3CC] font-raleway mt-3">
               Explore vibrant communities, discover hidden gems, and find the
               perfect neighborhood that matches your lifestyle with our expert
               local insights.
@@ -36,7 +39,7 @@ export default function Neighborhood() {
             className="flex justify-start sm:justify-end lg:justify-end"
             data-aos="fade-left"
           >
-            <button className="bg-neutral px-4 md:px-6 py-2 md:py-3 rounded-lg text-primary font-medium text-lg md:text-2xl font-roboto">
+            <button className="bg-neutral px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-primary font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#2B4257] hover:text-neutral hover:shadow-lg ">
               Explore
             </button>
           </div>
@@ -59,7 +62,7 @@ export default function Neighborhood() {
                 {/* Overlay with city name */}
                 <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8">
                   <div className="text-center opacity-0 transition-opacity group-hover:opacity-100">
-                    <p className="text-lg md:text-4xl text-neutral font-raleway font-semibold">
+                    <p className="text-2xl md:text-3xl text-neutral font-raleway font-semibold">
                       {city.name}
                     </p>
                   </div>

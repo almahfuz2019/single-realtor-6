@@ -16,7 +16,7 @@ export default function HomePage() {
       <HeroSection />
       <Services />
       <Neighborhood />
-      {/* <Featured /> */}
+      <Featured />
       <About />
       <WorkProcess />
       <Testimonial />

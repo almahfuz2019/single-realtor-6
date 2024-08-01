@@ -5,7 +5,8 @@ import { useEffect } from "react";
 
 export default function Animation() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, once: true });
   }, []);
-  return null;
+
+  return null; // Render nothing since this component is for initialization only
 }

@@ -18,22 +18,22 @@ const TestimonialSlider = () => {
   return (
     <div className="">
       {/* Header section */}
-      <div className="flex justify-end pr-10 mb-8 gap-10 mt-4 overflow-hidden">
+      <div className="flex justify-end pr-10 mb-8 gap-4 mt-4 overflow-hidden">
         <Image
           onClick={() => instanceRef.current.prev()}
-          src="https://i.ibb.co/c6BWbKS/Frame-1000008071.png"
+          src="/Images/left_Arrow.webp"
           height="50"
           width="50"
           alt="Client"
-          className="rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 p-0.5"
         />
         <Image
           onClick={() => instanceRef.current.next()}
-          src="https://i.ibb.co/1f270vg/Frame-1000008072.png"
+          src="/Images/right_arrow.webp"
           height="50"
           width="50"
           alt="Client"
-          className="rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 p-0.5"
         />
       </div>
       <div ref={sliderRef} className="keen-slider ">
@@ -48,35 +48,35 @@ const TestimonialSlider = () => {
           </p>
           <div className="flex justify-center gap-2 mt-5  ">
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
@@ -95,35 +95,35 @@ const TestimonialSlider = () => {
           </p>
           <div className="flex justify-center gap-2 mt-5  ">
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
               className="rounded-full cursor-pointer"
             />
             <Image
-              src="https://i.ibb.co/FhJCBWm/Star-24.png"
+              src="/Images/star.webp"
               height="35"
               width="35"
               alt="Client"
